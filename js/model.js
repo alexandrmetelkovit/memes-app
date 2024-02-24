@@ -33,10 +33,6 @@ class Model {
   setMemes(memes) {
     this.memes = memes;
 
-    // memes.forEach((mem) => {
-    //   this.memes = mem;
-    // });
-
     this.onMemesChanged(this.memes);
   }
 
@@ -55,6 +51,7 @@ class Model {
     this.onMemesChanged(this.memes, this.isError);
   }
 
+  //валидация текста
   _isTextValid(textUp, textDown) {
     return textUp.length < 20 && textDown.length < 20;
   }

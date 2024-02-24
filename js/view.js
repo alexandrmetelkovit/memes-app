@@ -8,9 +8,9 @@ class View {
 
     this.previewMemNode = document.getElementById("previewMem");
 
-    // this.memImgNode = document.getElementById("memImg");
-    // this.memTextUpNode = document.getElementById("memTextUp");
-    // this.memTextDownNode = document.getElementById("memTextDown");
+    this.previewMemTextUpNode = document.getElementById("previewMemTextUp");
+    this.previewMemImgNode = document.getElementById("previewMemImg");
+    this.previewMemTextDownNode = document.getElementById("previewMemTextDown");
 
     this.onNewTextMem = onNewTextMem;
     this.onMemesChanged = onMemesChanged;
@@ -21,15 +21,15 @@ class View {
   }
 
   _handleKeyboardInput = () => {
-    const textUp = this.textUpInputNode.value;
-    const textDown = this.textDownInputNode.value;
+    let textUp = this.textUpInputNode.value;
+    let textDown = this.textDownInputNode.value;
 
     this.onNewTextMem(textUp, textDown);
     // console.log(textUp, textDown);
   };
 
   //рендерим отображение текста из инпута
-  renderText(textMem, isError) {
+  renderText(textUp, textDown, isError) {
     // this._clearView();
     this.errorNode.innerText = "";
 
@@ -37,18 +37,12 @@ class View {
       this.errorNode.innerText = "Ошибка ввода";
     }
 
-    this.previewMemNode.innerHTML = "";
-
-    this.previewMemNode.innerHTML += `
-          <div class="preview__text">
-            <div class='preview__text-up'>${textMem.textUp}</div>
-            <div class='preview__text-down'>${textMem.textDown}</div>
-         </div> 
-				`;
+    this.previewMemTextUpNode.innerText = textUp;
+    this.previewMemTextDownNode.innerText = textDown;
   }
 
   //рендерим отображение картинки
-  renderMemes(memes) {
+  renderOptionSelect(memes) {
     this.memesSelectNode.innerHTML = "";
 
     memes.forEach((mem, index) => {
@@ -76,11 +70,11 @@ class View {
   }
 
   renderMemImg(url) {
-    this.previewMemNode.src = url;
+    this.previewMemImgNode.src = url;
   }
 
   _handleSelectTap = () => {
-    const selectedNameMem = this.memesSelectNode.value;
+    let selectedNameMem = this.memesSelectNode.value;
     this.renderMemImg(selectedNameMem);
   };
 

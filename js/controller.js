@@ -26,7 +26,7 @@ class Controller {
   }
 
   handleModelMemesChanged = (memes) => {
-    this.view.renderMemes(memes);
+    this.view.renderOptionSelect(memes);
 
     console.log(memes);
   };

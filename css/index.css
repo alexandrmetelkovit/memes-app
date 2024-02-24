@@ -7,8 +7,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
-  /* max-width: 100%; */
-  font-weight: 400;
+  font-weight: 500;
   background-color: #91b0a4;
 }
 
@@ -24,12 +23,6 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-/* .main {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-} */
 
 .header {
   text-align: center;
@@ -60,7 +53,7 @@ body {
 }
 
 select {
-  max-width: 400px;
+  /* max-width: 400px; */
   height: 35px;
   font-size: 20px;
   border: 1px solid rgb(0, 0, 0);
@@ -70,7 +63,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 400px;
+  /* max-width: 350px; */
 }
 
 .desc__input {
@@ -78,7 +71,7 @@ select {
 }
 
 input {
-  max-width: 400px;
+  max-width: 350px;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 15px;
   font-size: 30px;
@@ -121,21 +114,19 @@ input {
 }
 
 @media (max-width: 767px) {
+  .title {
+    font-size: 40px;
+  }
+
   .row {
+    width: 100%;
     flex-direction: column;
     align-items: center;
   }
 
-  .left-col,
-  .right-col {
-    width: 100%;
-  }
-
-  .option {
-    width: 100%;
-  }
-
-  input {
-    width: 100%;
+  .main__title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
   }
 }
