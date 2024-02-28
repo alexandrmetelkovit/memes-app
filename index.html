@@ -33,26 +33,26 @@
 
                 <form action="" class="option">
                   <label for="select">Мем</label>
-                  <select id="memesSelect" class="memesSelect">
+                  <select id="memesSelect" class="memes__select">
                     <option value="">Выберите мем из списка</option>
                   </select>
 
-                  <label class="desc__input" for="textUpInput"
+                  <label class="desc__input" for="textTopInput"
                     >Текст сверху</label
                   >
                   <input
-                    id="textUpInput"
+                    id="textTopInput"
                     class="text__up"
                     type="text"
                     placeholder="Введите текст"
                     autocomplete="off"
                   />
 
-                  <label class="desc__input" for="textDownInput"
+                  <label class="desc__input" for="textBottomInput"
                     >Текст снизу</label
                   >
                   <input
-                    id="textDownInput"
+                    id="textBottomInput"
                     class="text__down"
                     type="text"
                     placeholder="Введите текст"
@@ -65,10 +65,10 @@
               <div class="right__col">
                 <h2 class="main__title">Превью:</h2>
 
-                <div id="previewMem" class="main__box-img">
-                  <div id="previewMemTextUp"></div>
+                <div id="previewMem" class="preview__mem">
+                  <p id="previewMemTextTop" class="preview__text-top"></p>
                   <img id="previewMemImg" class="img" />
-                  <div id="previewMemTextDown"></div>
+                  <p id="previewMemTextBottom" class="preview__text-bottom"></p>
                 </div>
               </div>
             </div>

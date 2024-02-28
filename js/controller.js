@@ -17,8 +17,8 @@ class Controller {
   init() {
     this.api
       .fetchMemes()
-      .then((memes) => {
-        this.model.setMemes(memes.data.memes);
+      .then((response) => {
+        this.model.setMemes(response.data.memes);
       })
       .catch((error) => {
         this.model.setError(true);
@@ -27,23 +27,16 @@ class Controller {
 
   handleModelMemesChanged = (memes) => {
     this.view.renderOptionSelect(memes);
-
-    console.log(memes);
-  };
-
-  handleViewGenerateMem = () => {
-    this.model.addMemes(mem);
-    this.model.setError(false);
   };
 
   // контроллер слушает изменение модели
-  handleModelTextChanged = (textMem, isError) => {
-    this.view.renderText(textMem, isError);
+  handleModelTextChanged = (texInsideMeme, isError) => {
+    this.view.renderText(texInsideMeme, isError);
   };
 
   // контроллер умеет слушать от view, что произошло добавление нового текста
-  handleViewNewTextMem = (textUp, textDown) => {
+  handleViewNewTextMem = (textTop, textBottom) => {
     // в модели нужно добавить новый текст
-    this.model.addTextMem(textUp, textDown);
+    this.model.addTextMem(textTop, textBottom);
   };
 }
