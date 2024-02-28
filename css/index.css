@@ -36,7 +36,6 @@ body {
 
 .left__col,
 .right__col {
-  /* min-width: 360x; */
   padding: 7px;
 }
 
@@ -46,7 +45,6 @@ body {
 }
 
 .memes__select {
-  /* max-width: 400px; */
   height: 35px;
   font-size: 20px;
   border: 1px solid rgb(0, 0, 0);
@@ -64,7 +62,6 @@ body {
 }
 
 input {
-  /* max-width: 350px; */
   border: 1px solid rgb(0, 0, 0);
   border-radius: 15px;
   font-size: 30px;
@@ -80,8 +77,6 @@ input {
 .preview__mem {
   position: relative;
   width: 400px;
-  /* text-align: center; */
-  border: 1px solid black;
 }
 
 .img {
